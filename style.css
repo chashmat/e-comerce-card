@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+}
+
+h1 {
+    color: #ffeeff;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    transform-style: preserve-3d;
+}
+
+.container .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background: #232323;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(20px);
+    overflow: hidden;
+}
+
+.container .box::before {
+    content: 'NIKE';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 6em;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.container .box:hover::before {
+    opacity: 0.24;
+    top: 20px;
+}
+
+.container .box::after {
+    content: 'SHOES';
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 5em;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box:hover::after {
+    opacity: 0.24;
+    bottom: 20px;
+}
+
+.container .box .name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    transform: translate3d(0, 0, 75px);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container .box:hover .name {
+    top: 15px;
+    opacity: 1;
+}
+
+.container .box .buy {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 75px);
+    transform-style: preserve-3d;
+    color: #ffffff;
+    background: #333333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+    transition-delay: 0.5s;
+}
+
+.container .box:hover .buy {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.container .box .circle {
+    position: absolute;
+    left: -25%;
+    top: -15%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    transform-style: preserve-3d;
+    z-index: 0;
+    background: #c9ff37;
+}
+
+.container .box:hover .circle {
+    height: 1000px;
+    width: 1000px;
+    top: -55%;
+}
+
+.container .box .prouduct {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 300px;
+    transition: 0.5s;
+    z-index: 11;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 50px) rotate(-15deg);
+}
+
+.container .box:hover .prouduct {
+    transform: translate3d(-47%, -50%, 50px) rotate(15deg);
+}
+
+.two {
+    filter: invert(10%) hue-rotate(90deg) drop-shadow(2px 20px 10px black);
+}
+
+.three {
+    filter: invert(85%) hue-rotate(313deg) drop-shadow(2px 20px 10px black);
+}
+
+img {
+    transform: translateZ(20px);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecomerce card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Buy Your Favourite Shoes</h1>
+    <div class="container">
+        <div class="box" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+            <h2 class="name">Prouduct Name</h2>
+            <a href="#" class="buy">Buy now</a>
+            <div class="circle" style="filter: drop-shadow(2px 20px 10px black);"></div>
+            <img src="running_shoes.png" class="prouduct" style="filter: drop-shadow(2px 20px 10px black);">
+        </div>
+        <div class="box" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+            <h2 class="name">Prouduct Name</h2>
+            <a href="#" class="buy">Buy now</a>
+            <div class="circle two"></div>
+            <img src="running_shoes.png" class="prouduct two">
+        </div>
+        <div class="box" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+            <h2 class="name">Prouduct Name</h2>
+            <a href="#" class="buy">Buy now</a>
+            <div class="circle three"></div>
+            <img src="running_shoes.png" class="prouduct three">
+        </div>
+    </div>
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".box"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
+</body>
+
+</html>
